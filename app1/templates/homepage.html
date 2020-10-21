@@ -1,18 +1,20 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <title>Index</title>
-</head>
-<body>
-    <h1>Ciaone Homepage</h1>
-        <li><a href="{% url 'menu'%}">menu</a></li>
-        <li><a href="{% url 'chi_siamo'%}">chi siamo</a></li>
-        <li><a href="{% url 'variabili'%}">variabili</a></li>
-        <li><a href="{% url 'app2:if'%}">if</a></li>
-        <li><a href="{% url 'app2:else'%}">else</a></li>
-        <li><a href="{% url 'app2:elif'%}">elif</a></li>
-        <li><a href="{% url 'app2:for'%}">for</a></li>
-    </ol>
-</body>
-</html>
+{% extends 'base.html'%}
+
+{% block title %}
+Home
+{% endblock title %}
+
+
+{%block content%}
+
+<h1>Ciaone Homepage</h1>
+<ol>
+    <li><a href="{% url 'menu'%}">menu</a></li>
+    <li><a href="{% url 'chi_siamo'%}">chi siamo</a></li>
+    <li><a href="{% url 'variabili'%}">variabili</a></li>
+    <li><a href="{% url 'app2:if'%}">if</a></li>
+    <li><a href="{% url 'app2:else'%}">else</a></li>
+    <li><a href="{% url 'app2:elif'%}">elif</a></li>
+    <li><a href="{% url 'app2:for'%}">for</a></li>
+</ol>
+{%endblock content%}

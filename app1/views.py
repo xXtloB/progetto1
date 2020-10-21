@@ -6,7 +6,7 @@ def homepage(request):
     return render(request, "homepage.html") 
 
 def menu(request):
-    return HttpResponse("<ol><li>Prima opzione</li><li>Seconda opzione</li><li>Terza opzione</li></ol>")
+    return render(request, "menu.html")
 
 def chi_siamo(request):
     return render(request, "chi_siamo.html")

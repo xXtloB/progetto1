@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>if else</title>
-</head>
-<body>
+{% extends 'base.html'%}
+
+{% block title %}
+Es IfElse
+{% endblock title %}
+
+
+{%block content%}
+
+
 <b>var1 = {{ var1 }}</b> <br/>
 	<b>var2 = {{ var2 }}</b> <br/>
 	<b>var3 = {{ var3 }}</b> <br/>
@@ -100,6 +103,4 @@
 		 <i>zero is not equal to 0</i></b>
     {% endif %}
     
-    <li><a href="{% url 'home'%}">home page welcome</a></li>
-</body>
-</html>
+	{%endblock content%}
