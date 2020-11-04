@@ -11,11 +11,11 @@ class Giornalista(models.Model):
 
 class Articolo(models.Model):
     titolo = models.CharField(max_length=100)
-    contenuto = models.Textfield()
+    contenuto = models.TextField()
     giornalista = models.ForeignKey(
         Giornalista, on_delete=models.CASCADE, related_name="articoli")
 
     def __str__(self):
-        return self.nome + " " + self.cognome
+        return self.titolo
 
 # Create your models here.
