@@ -8,7 +8,7 @@
   {% for articolo in articoli %}
     <p><strong>Titolo: </strong>{{ articolo.titolo }}</p>
     <p><strong>Contenuto: </strong>{{ articolo.contenuto }}</p>
-    <p><strong>Autore: </strong>{{ articolo.autore }}</p>
+    <p><strong>Autore: </strong>{{ articolo.giornalista.nome }} {{ articolo.giornalista.cognome }}</p>
     <br>
   {% endfor %}
 

@@ -5,10 +5,15 @@
 
 {%block content%}
   <h4>Articoli:</h4>
+  <br>
   {% for articolo in articoli %}
-    <p><strong>Titolo: </strong><a href="/news/articoli/{{articolo.id}}">{{ articolo.titolo }}</a></p>
+    <p><strong>Titolo: </strong>{{ articolo.titolo }}</p>
     <p><strong>Contenuto: </strong>{{ articolo.contenuto }}</p>
     <p><strong>Autore: </strong>{{ articolo.giornalista.nome }} {{ articolo.giornalista.cognome }}</p>
+    <a class="btn btn-success" href="/news/articoli/{{articolo.id}}" role="button">Vai all'articolo</a>
+    <br>
+    <br>
+    <br>
     <br>
   {% endfor %}
 

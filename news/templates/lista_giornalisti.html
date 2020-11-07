@@ -5,10 +5,15 @@
 
 {%block content%}
   <h4>Giornalisti:</h4>
+  <br>
   {% for giornalista in giornalisti %}
-    <p><strong>Nome: </strong><a href="/news/giornalisti/{{giornalista.id}}">{{ giornalista.nome }}</a></p>
-    <p><strong>Cognome: </strong>{{ giornalista.cognome }}</p>
+    <p><strong>Giornalista {{ forloop.counter }}: </strong>{{ giornalista.nome }} {{ giornalista.cognome }}</p>
+    <a class="btn btn-success" href="/news/giornalisti/{{giornalista.id}}" role="button">Info giornalista</a>
     <br>
+    <br>
+    <br>
+    <br>
+
   {% endfor %}
 
 {%endblock content%}
