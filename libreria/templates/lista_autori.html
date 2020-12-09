@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+{%block title%}
+    Lista Autori
+{%endblock title%}
+
+{%block content%}
+  <h4>Autori:</h4>
+  <br>
+  {% for autore in autori %}
+    <p><strong>Autore {{ forloop.counter }}: </strong>{{ autore.nome }}</p>
+    <p><strong>Nazione: </strong>{{ autore.nazione }}</p>
+    <a class="btn btn-success" href="/libreria/autore/{{autore.id}}" role="button">Info autore</a>
+    <br>
+    <br>
+    <br>
+    <br>
+
+  {% endfor %}
+
+{%endblock content%}

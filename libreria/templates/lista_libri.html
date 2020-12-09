@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+{%block title%}
+    Lista Libri
+{%endblock title%}
+
+{%block content%}
+  <h4>Libri:</h4>
+  <br>
+  {% for libro in libri %}
+    <p><strong>Titolo: </strong>{{ libro.titolo }}</p>
+    <p><strong>Autore: </strong>{{ libro.autore.nome }}</p>
+    <p><strong>Genere: </strong>{{ libro.genere.genere }}</p>
+    <p><strong>ISBN: </strong>{{ libro.isbn }}</p>
+    <!-- <a class="btn btn-success" href="/libreria/autore/{{autore.id}}" role="button">Vai all'Autore</a> -->
+    <br>
+    <br>
+    <br>
+    <br>
+  {% endfor %}
+
+{%endblock content%}
