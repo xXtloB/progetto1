@@ -8,7 +8,9 @@
   <br>
   {% for libro in libri %}
     <p><strong>Titolo: </strong>{{ libro.titolo }}</p>
-    <p><strong>Autore: </strong>{{ libro.autore.nome }}</p>
+    <p>Autore: <a href="{% url 'libreria:autore_detail' pk=libro.autore.id %}">
+      {{ libro.autore.nome }}
+    </a></p>
     <p><strong>Genere: </strong>{{ libro.genere.genere }}</p>
     <p><strong>ISBN: </strong>{{ libro.isbn }}</p>
     <!-- <a class="btn btn-success" href="/libreria/autore/{{autore.id}}" role="button">Vai all'Autore</a> -->
