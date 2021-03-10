@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'app2',
     'news',
     'libreria',
+    'forms_app',
 ]
 
 MIDDLEWARE = [
@@ -62,7 +63,9 @@ TEMPLATES = [
         'DIRS': [os.path.join(BASE_DIR, 'app1/templates'),
                 os.path.join(BASE_DIR, 'app2/templates'),
                 os.path.join(BASE_DIR, 'templates'),
-                os.path.join(BASE_DIR, 'news/templates')],
+                os.path.join(BASE_DIR, 'news/templates'),
+                os.path.join(BASE_DIR, 'libreria/templates'),
+                os.path.join(BASE_DIR, 'forms_app/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
