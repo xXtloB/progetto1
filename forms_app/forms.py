@@ -5,3 +5,4 @@ class FormContatto(forms.Form):
     email=forms.EmailField()
     contenuto=forms.CharField(widget=forms.Textarea(attrs={"placeholder": "Scrivi qui"}))
 
+#ciao
